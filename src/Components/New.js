@@ -19,14 +19,6 @@ function New() {
         });
     }
 
-    // const handleGlutenCheck = (e) => {
-    //     const checked = e.target.checked
-    //     setspringInput({
-    //     ...springInput,
-    //     [e.target.name]: checked
-    //     });
-    // }
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         const URL = `${process.env.REACT_APP_BACKEND_URI}/springs`
@@ -40,6 +32,7 @@ function New() {
         console.log('response', data)
         navigate('/')
     }
+// need to update form values to match database
 
     return (
         <form onSubmit={handleSubmit}>

@@ -7,7 +7,8 @@ function NavigationBar() {
       <>
         <Navbar className="navColor">
           <Container>
-            <Navbar.Brand href="/" className="fw-bolder">Logo here</Navbar.Brand>
+            <Navbar.Brand href="/" className="fw-bolder"></Navbar.Brand>
+            <img src={"./assets/ctlogo.PNG"} alt="company logo"style={{marginTop: -1}} />
             <Nav className="me-auto">
               <Nav.Link href="/new" className="fw-bold">New Batch</Nav.Link>
             </Nav>
