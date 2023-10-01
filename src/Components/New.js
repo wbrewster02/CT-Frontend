@@ -22,6 +22,7 @@ function New() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const URL = `${process.env.REACT_APP_BACKEND_URI}/springs`
+        console.log(URL)
         console.log('spring input', springInput)
         const response = await fetch(URL, {
             method: 'POST',
@@ -32,12 +33,14 @@ function New() {
         console.log('response', data)
         navigate('/')
     }
-// need to update form values to match database
+
 
     return (
         <form onSubmit={handleSubmit}>
             <input onChange={handleChange} value={springInput.name} name='name' placeholder='name' />
-            <input onChange={handleChange} value={springInput.image} name='image' placeholder='image' />
+            <input onChange={handleChange} value={springInput.lotdate} name='lotdate' placeholder='lot date' />
+            <input onChange={handleChange} value={springInput.type} name='type' placeholder='type' />
+            <input onChange={handleChange} value={springInput.initialcount} name='initialcount' placeholder='initial count' />
             <input type='submit' />
         </form>
     )
