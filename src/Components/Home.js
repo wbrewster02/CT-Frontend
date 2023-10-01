@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   const [springs, setSprings] = useState([])
+  console.log(springs)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +18,7 @@ function Home() {
     fetchData()
   }, [])
 
-  const display = springs.map(spring => {
+  const display = springs.map((spring) => {
     return (
       <div key={spring._id}>
         <Link to={`/spring/${spring._id}`}>
@@ -26,6 +27,21 @@ function Home() {
       </div>
     )
   })
+
+
+  return (
+    <div>
+      <h1>In production</h1>
+      {display}
+    </div>
+  );
+}
+
+export default Home;
+
+
+
+
   // const display = (
   //   function SmallExample() {
   //     return (
@@ -61,13 +77,3 @@ function Home() {
   //     );
   //   }
   // )
-
-  return (
-    <div>
-      <h1>In production</h1>
-      {display}
-    </div>
-  );
-}
-
-export default Home;
