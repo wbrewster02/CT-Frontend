@@ -39,41 +39,30 @@ function Home() {
 
 export default Home;
 
+// const display = (
+//   <Row xs={1} md={2} lg={3} className="g-4">
+//     {springs.map((spring) => (
+//       <Col key={spring._id} className="col">
+//         <Card>
+//           <Card.Body>
+//             <Card.Title>{spring.name}</Card.Title>
+//             <Button variant="primary" className="btn btn-primary btn-sm">
+//               <Link to={`/springs/${spring._id}`} className="btn btn-primary">
+//                 View spring
+//               </Link>
+//             </Button>
+//           </Card.Body>
+//         </Card>
+//       </Col>
+//     ))}
+//   </Row>
+// );
 
-
-
-  // const display = (
-  //   function SmallExample() {
-  //     return (
-  //       <Table striped bordered hover size="sm">
-  //         <thead>
-  //           <tr>
-  //             <th>#</th>
-  //             <th>First Name</th>
-  //             <th>Last Name</th>
-  //             <th>Username</th>
-  //           </tr>
-  //         </thead>
-  //         <tbody>
-  //           <tr>
-  //             <td>1</td>
-  //             <td>Mark</td>
-  //             <td>Otto</td>
-  //             <td>@mdo</td>
-  //           </tr>
-  //           <tr>
-  //             <td>2</td>
-  //             <td>Jacob</td>
-  //             <td>Thornton</td>
-  //             <td>@fat</td>
-  //           </tr>
-  //           <tr>
-  //             <td>3</td>
-  //             <td colSpan={2}>Larry the Bird</td>
-  //             <td>@twitter</td>
-  //           </tr>
-  //         </tbody>
-  //       </Table>
-  //     );
-  //   }
-  // )
+// return (
+//   <div className="container">
+//     <h1>spring HomePage</h1>
+//     <div className="row">
+//       {display}
+//     </div>
+//   </div>
+// );
