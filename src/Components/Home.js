@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-// import Table from 'react-bootstrap/Table';
+import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom'
 
 function Home() {
   const [springs, setSprings] = useState([])
-  console.log(springs)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,21 +17,44 @@ function Home() {
     fetchData()
   }, [])
 
-  const display = springs.map((spring) => {
-    return (
-      <div key={spring._id}>
-        <Link to={`/spring/${spring._id}`}>
-          <p>{spring.name}</p>
-        </Link>
-      </div>
-    )
-  })
+  // const display = springs.map((spring) => {
+  //   return (
+  //     <div key={spring._id}>
+  //       <Link to={`/spring/${spring._id}`}>
+  //         <p>{spring.name}</p>
+  //       </Link>
+  //     </div>
+  //   )
+  // })
+  const display2= (
+    <Table striped bordered variant = 'dark'>
+        {/* thead will show initial values for the table */}
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Lot Date</th>
+          <th>Type</th>
+          <th>Initial Count</th>
+        </tr>
+    </thead>
+        {springs.map((spring) => (
+            <tbody>
+              <tr key ={spring._id}>
+                <th><Link to={`/springs/${spring._id}`}>{spring.name}</Link></th>
+                <th>{spring.lotdate}</th>
+                <th>{spring.type}</th>
+                <th>{spring.initialcount}</th>
+              </tr>
+            </tbody>
+        ))}
+    </Table>
+)
 
 
   return (
     <div>
       <h1>In production</h1>
-      {display}
+      {display2}
     </div>
   );
 }

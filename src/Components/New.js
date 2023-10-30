@@ -41,7 +41,7 @@ function New() {
             <input onChange={handleChange} value={springInput.lotdate} name='lotdate' placeholder='lot date' />
             <input onChange={handleChange} value={springInput.type} name='type' placeholder='type' />
             <input onChange={handleChange} value={springInput.initialcount} name='initialcount' placeholder='initial count' />
-            <input onChange={handleChange} value={springInput.subgroup} name='subgroup' placeholder='subgroup' />
+            {/* <input onChange={handleChange} value={springInput.subgroup} name='subgroup' placeholder='subgroup' /> */}
             <input type='submit' />
         </form>
     )

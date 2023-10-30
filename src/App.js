@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path = '/' element = {<Home />} />
-          <Route path = '/spring/:id' element = {<Spring />} />
+          <Route path = '/springs/:id' element = {<Spring />} />
           <Route path = '/new' element = {<New />} />
         </Routes>
       </Router>

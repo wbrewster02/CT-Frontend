@@ -8,8 +8,8 @@ function NavigationBar() {
       <>
         <Navbar className="navColor">
           <Container>
-            <Navbar.Brand href="/" className="fw-bolder"></Navbar.Brand>
-            <img src={companyLogo} alt="company logo"style={{marginTop: -1}} />
+            <Navbar.Brand href="/" className="fw-bolder"><img src={companyLogo} alt="company logo"style={{marginTop: -1}} /></Navbar.Brand>
+            
             <Nav className="me-auto">
               <Nav.Link href="/new" className="fw-bold">Add New Batch</Nav.Link>
             </Nav>
