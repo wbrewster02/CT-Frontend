@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate  } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function Spring() {
     const navigate = useNavigate()
@@ -25,7 +26,40 @@ function Spring() {
         const display = spring && (
             <div className='Spring-Page'>
                 <h1>{spring.name}</h1>
-              
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Process 1</Form.Label>
+                                <Form.Control type="process" placeholder="initials" />
+                            <Form.Text className="text-muted">
+                                Please enter initials for proof of completion
+                            </Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Process 2</Form.Label>
+                                <Form.Control type="process" placeholder="initials" />
+                            <Form.Text className="text-muted">
+                                Please enter initials for proof of completion
+                            </Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Process 3</Form.Label>
+                                <Form.Control type="process" placeholder="initials" />
+                            <Form.Text className="text-muted">
+                                Please enter initials for proof of completion
+                            </Form.Text>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>All process' completed</Form.Label>
+                            <Form.Control type="Completion" placeholder="Manager Initials" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="Submit to Database" />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                         Submit
+                        </Button>
+                    </Form>
             </div>
     )
 
@@ -40,59 +74,32 @@ export default Spring
 
 
 
-// function Recipe() {
-//   const navigate = useNavigate()
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
 
-//   const [recipe, setRecipe] = useState(null)
-
-//   const { id } = useParams()
-//   const URL = `${process.env.REACT_APP_BACKEND_URI}/recipes/${id}`
-  
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const response = await fetch(URL)
-//       const data = await response.json()
-//       setRecipe(data)
-//     }
-
-//     fetchData()
-//   }, [id, URL])
-
-//   const deleteRecipe = async () => {
-//     const response = await fetch(URL, {
-//       method: 'DELETE'
-//     })
-//     if (response.status !== 204) console.log('error') // add error handling later
-//     navigate('/')
-//   }
-
-//   const display = recipe && (
-//     <div className="Recipe-Page">
-//       <h1>{recipe.name}</h1>
-//       <div>
-//         <Button variant="success" onClick={() => navigate(`/recipes/update/${id}`)}>Edit</Button>
-//         <Button variant="danger" onClick={deleteRecipe}>Delete</Button>
-//       </div>
-//       <h2>Ingredients Needed</h2>
-//       <ul className="ingredients">
-//         {recipe.ingredients.map((ingredient, index) => (
-//           <li key={index}>{ingredient}</li>
-//         ))}
-//       </ul>
-//       <h2>Steps</h2>
-//       <ol className="steps">
-//         {recipe.steps.map((step, index) => (
-//           <li key={index}>{step}</li>
-//         ))}
-//       </ol>
-//     </div>
-//   )
-
+// function BasicExample() {
 //   return (
-//       <div>
-//           {display}
-//       </div>
-//   )
+//     <Form>
+//       <Form.Group className="mb-3" controlId="formBasicEmail">
+//         <Form.Label>Email address</Form.Label>
+//         <Form.Control type="email" placeholder="Enter email" />
+//         <Form.Text className="text-muted">
+//           We'll never share your email with anyone else.
+//         </Form.Text>
+//       </Form.Group>
+
+//       <Form.Group className="mb-3" controlId="formBasicPassword">
+//         <Form.Label>Password</Form.Label>
+//         <Form.Control type="password" placeholder="Password" />
+//       </Form.Group>
+//       <Form.Group className="mb-3" controlId="formBasicCheckbox">
+//         <Form.Check type="checkbox" label="Check me out" />
+//       </Form.Group>
+//       <Button variant="primary" type="submit">
+//         Submit
+//       </Button>
+//     </Form>
+//   );
 // }
 
-// export default Recipe
+// export default BasicExample;
