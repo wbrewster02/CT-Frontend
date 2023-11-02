@@ -23,34 +23,48 @@ function Spring() {
         fetchData()
     }, [id, URL])
 
+    const deleteSpring = async () => {
+        const response = await fetch(URL, {
+          method: 'DELETE'
+        })
+        if (response.status !== 204) console.log('error') // add error handling later
+        navigate('/')
+      }
+
         const display = spring && (
             <div className='Spring-Page'>
                 <h1>{spring.name}</h1>
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="formBasicInitial1">
                             <Form.Label>Process 1</Form.Label>
+                            <br />
+                            <Form.Label>Initial count: {spring.initialcount} Updated count:</Form.Label>
                                 <Form.Control type="process" placeholder="initials" />
                             <Form.Text className="text-muted">
-                                Please enter initials for proof of completion
+                                Please enter initials for proof of completion.
                             </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="formBasicInitial2">
                             <Form.Label>Process 2</Form.Label>
+                            <br />
+                            <Form.Label>Initial count: {spring.initialcount} Updated count:</Form.Label>
                                 <Form.Control type="process" placeholder="initials" />
                             <Form.Text className="text-muted">
-                                Please enter initials for proof of completion
+                                Please enter initials for proof of completion.
                             </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="formBasicInitial3">
                             <Form.Label>Process 3</Form.Label>
+                            <br />
+                            <Form.Label>Initial count: {spring.initialcount} Updated count:</Form.Label>
                                 <Form.Control type="process" placeholder="initials" />
                             <Form.Text className="text-muted">
-                                Please enter initials for proof of completion
+                                Please enter initials for proof of completion.
                             </Form.Text>
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>All process' completed</Form.Label>
+                        <Form.Group className="mb-3" controlId="formInitial">
+                            <Form.Label>All process' completed.</Form.Label>
                             <Form.Control type="Completion" placeholder="Manager Initials" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -58,6 +72,9 @@ function Spring() {
                         </Form.Group>
                         <Button variant="primary" type="submit">
                          Submit
+                        </Button>
+                        <Button variant="danger" onClick={deleteSpring}>
+                        Delete
                         </Button>
                     </Form>
             </div>

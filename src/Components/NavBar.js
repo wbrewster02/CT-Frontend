@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import companyLogo from './assets/ctlogo.PNG';
+import companyLogo from './assets/ctlogo2.png';
 
 function NavigationBar() {
     return (
